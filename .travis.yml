@@ -20,3 +20,17 @@ deploy:
    branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker"
+  env: "docker-env2"
+  bucket_name: "elasticbeanstalk-us-east-2-446518935327"
+  bucket_path: "docker"
+  on:
+   branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
